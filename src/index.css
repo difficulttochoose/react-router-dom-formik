@@ -1,13 +1,49 @@
+@import "./reset.css";
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #3ea9f5;
+  color: white;
 }
-
+button {
+  color: white;
+}
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Gotham";
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:focus {
+  outline: none;
+}
+h1 {
+  font-size: 38px;
+  line-height: 1.5em;
+  font-family: "Gotham";
+  font-weight: 900;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/iCiel Gotham-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/iCiel Gotham-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }

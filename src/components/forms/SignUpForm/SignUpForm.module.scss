@@ -1,0 +1,21 @@
+@import "../../common";
+@import "./../../../index.css";
+
+.inputField {
+  width: 47%;
+  margin-bottom: $input-bottom-margin;
+  position: relative;
+  @media screen and (max-width: 500px) {
+    width: $content-width;
+  }
+}
+.inputsWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.subHeader {
+  font-size: 19px;
+  line-height: 2em;
+  font-weight: normal;
+}

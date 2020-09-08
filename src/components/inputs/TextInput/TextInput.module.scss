@@ -1,0 +1,45 @@
+@import "../../common";
+@import "../../../index.css";
+
+%autofill {
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 200px 200px 300px 200px rgb(255, 255, 255);
+  }
+}
+
+.input {
+  width: $content-width;
+  border: 2px solid transparent;
+  padding: 1.5em;
+  border-radius: $border-radius;
+  &::placeholder {
+    color: rgb(167, 167, 167);
+    text-transform: capitalize;
+  }
+}
+.errorMessage {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background: #ff000087;
+  color: #ffffff;
+  border: 1px solid red;
+  font-size: 15px;
+  padding: 0.3em 0.7em;
+  max-width: $content-width;
+  width: $content-width;
+  @extend %textHide;
+  &:hover {
+    text-overflow: unset;
+    white-space: normal;
+  }
+}
+.validInput {
+  border-color: green;
+  @extend %autofill;
+}
+.invalidInput {
+  border-color: red;
+  @extend %autofill;
+}
