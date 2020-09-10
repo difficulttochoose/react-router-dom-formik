@@ -24,5 +24,8 @@ const VALIDATION_SCHEMA = Yup.object().shape({
   passwordConfirmation: Yup.string()
     .oneOf([Yup.ref("password")], "Passwords must match")
     .required("Confirm password is required field"),
+  role: Yup.string()
+    .oneOf(["buyer", "seller"])
+    .required("A radio option is required"),
 });
 export default VALIDATION_SCHEMA;

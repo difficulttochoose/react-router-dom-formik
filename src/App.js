@@ -2,19 +2,22 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignUpForm from "./components/forms/SignUpForm";
 import LoginForm from "./components/forms/LoginForm";
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 
-function HeaderLogoBtn({ to, ...rest }) {
+function HeaderSwitch({ to, ...rest }) {
   return (
     <div className={styles.headerWrapper}>
-      <a href="https://www.squadhelp.com/">
-        <img
-          src="https://www.squadhelp.com/img/logo.png"
-          alt="logo"
-          className={styles.logoStyle}
-        />
+      <a href="/">
+        <img src="https://www.squadhelp.com/img/logo.png" alt="logo" />
       </a>
-      <Link to={to} {...rest} />
+      {to === "/" ? (
+        <div>
+          <Link to="/signup" children={"Sign up"} {...rest} />
+          <Link to="/login" children={"Login"} {...rest} />
+        </div>
+      ) : (
+        <Link to={to} {...rest} />
+      )}
     </div>
   );
 }
@@ -23,8 +26,11 @@ export default function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/" exact>
+          <HeaderSwitch to="/" className={styles.switchBtn} />
+        </Route>
         <Route path="/signup">
-          <HeaderLogoBtn
+          <HeaderSwitch
             to="/login"
             className={styles.switchBtn}
             children={"Login"}
@@ -32,7 +38,7 @@ export default function App() {
           <SignUpForm />
         </Route>
         <Route path="/login">
-          <HeaderLogoBtn
+          <HeaderSwitch
             to="/signup"
             className={styles.switchBtn}
             children={"Sign up"}

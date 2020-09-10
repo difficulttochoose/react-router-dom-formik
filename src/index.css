@@ -37,13 +37,13 @@ code {
 }
 @font-face {
   font-family: "Gotham";
-  src: url("./fonts/iCiel Gotham-Thin.ttf") format("truetype");
+  src: url("./fonts/iCiel Gotham-Thin.ttf");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("./fonts/iCiel Gotham-Medium.ttf") format("truetype");
+  src: url("./fonts/iCiel Gotham-Medium.ttf");
   font-style: normal;
   font-weight: normal;
 }

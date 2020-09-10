@@ -18,7 +18,7 @@ const textFields = [
   },
 ];
 
-const radioFill = [
+const radioLabels = [
   {
     value: "buyer",
     name: "Join As a Buyer",
@@ -77,10 +77,11 @@ export default function SignUpForm(props) {
                 ))}
               </div>
               <div>
-                {radioFill.map((field) => (
+                {radioLabels.map((label) => (
                   <RadioInput
-                    key={`${field.name}${field.description}`}
-                    {...field}
+                    key={`${label.name}${label.description}`}
+                    errors={errors}
+                    {...label}
                   />
                 ))}
               </div>
