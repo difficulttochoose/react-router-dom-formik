@@ -4,11 +4,7 @@ import VALIDATION_SCHEMA from "./LoginFormValidationSchema";
 import styles from "./LoginForm.module.scss";
 import classNames from "classnames";
 import TextInput from "../../inputs/TextInput";
-
-const fields = [
-  { name: "email", type: "text", placeholder: "Email address" },
-  { name: "password", type: "password", placeholder: "Password" },
-];
+import { fields } from "./loginApi";
 
 export default function LoginForm() {
   const initialValues = {
